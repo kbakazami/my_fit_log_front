@@ -7,7 +7,9 @@ export default function NavbarHome() {
 
         <nav className="flex text-white justify-between w-full h-14 bg-primary items-center px-10">
             <div>
-                Logo
+                <Link url="/">
+                    Logo
+                </Link>
             </div>
             <div>
                 Login
