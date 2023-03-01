@@ -59,7 +59,7 @@ export default function Home(){
                         eius explicabo facilis, nesciunt nisi officiis quia quibusdam quisquam reprehenderit soluta,
                         temporibus.
                     </p>
-                    <Button path={"#"} name={"Se connecter"} />
+                    <Button path={"/login"} name={"Se connecter"} />
                 </section>
             </main>
 

@@ -12,7 +12,7 @@ export default function LayoutDashboard(){
         <div>
             <Navbar />
             <Routes>
-                <Route path={"/dashboard"} element={<Dashboard />} />
+                <Route path={"/"} element={<Dashboard />} />
                 <Route path={"/alimentation"} element={<Alimentation />} />
                 <Route path={"/glycemie"} element={<Glucose />} />
             </Routes>
