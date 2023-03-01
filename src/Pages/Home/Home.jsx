@@ -1,13 +1,9 @@
-import NavbarHome from "../../Components/Navbar/NavbarHome.jsx";
+import Navbar from "../../Components/Navbar/Navbar.jsx";
 import Button from "../../Components/Button/Button.jsx";
 
 export default function Home(){
     return (
         <div>
-            <header>
-                <NavbarHome />
-            </header>
-
             <main>
                 <section>
                     <h2>Concept</h2>
@@ -63,7 +59,7 @@ export default function Home(){
                         eius explicabo facilis, nesciunt nisi officiis quia quibusdam quisquam reprehenderit soluta,
                         temporibus.
                     </p>
-                    <Button name={"Se connecter"} />
+                    <Button path={"#"} name={"Se connecter"} />
                 </section>
             </main>
 
