@@ -1,19 +1,41 @@
-import NavbarHome from "./Components/Navbar/NavbarHome.jsx";
-import NavbarApp from "./Components/Navbar/NavbarProfile.jsx";
-import Home from "./Pages/Home/Home.jsx";
-import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
-import Profile from "./Pages/Profile/Profile.jsx";
+import LayoutDashboard from "./Layout/LayoutDashboard/LayoutDashboard.jsx";
+import LayoutHome from "./Layout/LayoutHome/LayoutHome.jsx";
+import {useEffect, useState} from "react";
+import {Navigate, redirect, useNavigate} from "react-router-dom";
 
 function App() {
 
-  return (
-      <Router>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/profile" element={<Profile />} />
-        </Routes>
-      </Router>
-  )
+    const [user, setUser] = useState(true);
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        if (!user){
+            navigate("/");
+        }else{
+            navigate("/dashboard");
+        }
+    },[user])
+
+    if(user){
+        return (
+            <>
+                <div className={"app"}>
+                    <LayoutDashboard />
+                </div>
+            </>
+        )
+    }else{
+        return (
+            <>
+                <div className={"app"}>
+                    <LayoutHome />
+                </div>
+            </>
+        )
+    }
+
 }
+
+
 
 export default App
