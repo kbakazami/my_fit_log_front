@@ -3,7 +3,11 @@ import {useForm} from "react-hook-form";
 export default function LoginForm(onSubmit){
     const { register, handleSubmit, formState: { errors } } = useForm();
     onSubmit = data => {
-        authService.login(data.username, data.password);
+        try {
+            authService.login(data.username, data.password);
+        }catch (e){
+            console.log(e);
+        }
     };
 
     return (

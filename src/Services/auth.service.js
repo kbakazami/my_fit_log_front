@@ -1,4 +1,5 @@
 import axios from 'axios';
+import {redirect} from "react-router-dom";
 
 const API_URL = 'http://localhost:8000/api';
 
@@ -15,6 +16,7 @@ class AuthService {
                 if (response.data.token) {
                     localStorage.setItem('user', JSON.stringify(response.data));
                 }
+                window.location.assign("/");
                 return response.data;
             });
     }

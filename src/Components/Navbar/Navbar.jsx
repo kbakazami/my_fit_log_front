@@ -7,7 +7,7 @@ import AuthService from "../../Services/auth.service.js";
 export default function Navbar() {
         const logout = () => {
             AuthService.logout();
-            return redirect("/");
+            window.location.assign("/");
         }
 
         return (
