@@ -20,7 +20,7 @@ function App() {
 
     }, [])
 
-    if(!currentUser){
+    if(currentUser){
         return (
             <>
                 <div className={"app"}>
