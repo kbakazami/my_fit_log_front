@@ -6,8 +6,6 @@ import Navbar from "../../Components/Navbar/Navbar.jsx";
 
 export default function LayoutDashboard(){
 
-    
-
     return(
         <div className={"flex flex-col lg:flex-row"}>
             <Navbar />

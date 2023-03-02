@@ -27,13 +27,18 @@ class AuthService {
 
     register(username, password, email, lastname, firstname, birthdate) {
         return axios.post(API_URL + '/register', {
-            username,
             password,
             email,
             lastname,
             firstname,
-            birthdate
-        })
+            birthdate,
+            createdAt : Date.now(),
+            accesAt : Date.now(),
+            isActive: true
+        }, {headers: {
+                "Content-Type" : "application/json",
+                "Accept" : "application/json"
+            }})
     }
 
     getCurrentUser() {
