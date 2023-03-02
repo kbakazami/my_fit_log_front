@@ -1,7 +1,9 @@
 import axios from 'axios';
-import {redirect} from "react-router-dom";
+import dateFormat from "./date.format.js";
+import bcrypt from "bcryptjs";
 
 const API_URL = 'http://localhost:8000/api';
+const salt = bcrypt.genSaltSync(10);
 
 class AuthService {
     login(username, password) {
@@ -25,15 +27,21 @@ class AuthService {
         localStorage.removeItem('user');
     }
 
-    register(username, password, email, lastname, firstname, birthdate) {
+    register(password, email, lastname, firstname, birthdate) {
+        const date = new Date();
+
         return axios.post(API_URL + '/register', {
-            username,
-            password,
+            password : bcrypt.hashSync(password, salt),
             email,
             lastname,
             firstname,
-            birthdate
-        })
+            birthdate,
+            createdAt : dateFormat.formatDate(),
+            accesAt : dateFormat.formatDate(),
+            isActive: true
+        }, {headers: {
+                "Content-Type" : "application/json",
+            }})
     }
 
     getCurrentUser() {
@@ -42,3 +50,5 @@ class AuthService {
 }
 
 export default new AuthService();
+
+
