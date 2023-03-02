@@ -1,3 +1,5 @@
+@import url('./css/main.scss');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
