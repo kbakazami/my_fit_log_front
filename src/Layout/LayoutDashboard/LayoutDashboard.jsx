@@ -9,7 +9,7 @@ export default function LayoutDashboard(){
     
 
     return(
-        <div>
+        <div className={"flex flex-col lg:flex-row"}>
             <Navbar />
             <Routes>
                 <Route path={"/"} element={<Dashboard />} />
