@@ -31,6 +31,7 @@ module.exports = {
       },
       spacing: {
         '17' : '4.375rem',
+        '15' : '3.75rem'
       }
     },
   },

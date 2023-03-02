@@ -53,3 +53,11 @@ h1,h2,h3,h4 {
     }
   }
 }
+
+.btn-nav {
+  @apply flex flex-row items-center gap-x-3.5 w-fit py-1 px-3.5;
+
+  &.active {
+    @apply bg-white text-primary rounded-xl;
+  }
+}
