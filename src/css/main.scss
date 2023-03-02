@@ -1,0 +1,55 @@
+@font-face {
+  font-family: 'FiraSans';
+  src: url("../fonts/FiraSansCondensed-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FiraSans';
+  src: url("../fonts/FiraSansCondensed-Bold.ttf");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url("../fonts/Poppins-regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url("../fonts/Poppins-bold.ttf");
+  font-weight: 700;
+  font-style: normal;
+}
+
+body {
+  @apply font-fira-sans;
+}
+
+h1,h2,h3,h4 {
+  @apply font-poppins;
+}
+
+.btn {
+  @apply inline-block text-white font-bold border border-black bg-black rounded-xl py-1 px-2.5 text-xl ease-in-out duration-300 uppercase;
+
+  &.btn-primary {
+    @apply border-primary bg-primary px-8;
+
+    &:hover {
+      @apply bg-white text-primary;
+    }
+  }
+
+  &.btn-inverted {
+    @apply border-white bg-transparent normal-case font-normal text-base;
+
+    &:hover {
+      @apply bg-white text-primary;
+    }
+  }
+}

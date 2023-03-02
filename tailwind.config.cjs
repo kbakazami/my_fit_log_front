@@ -6,10 +6,31 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {
+        'sm': '640px',
+        // => @media (min-width: 640px) { ... }
+        'md': '768px',
+        // => @media (min-width: 768px) { ... }
+        'lg': '1024px',
+        // => @media (min-width: 1024px) { ... }
+        'xl': '1280px',
+        // => @media (min-width: 1280px) { ... }
+        '2xl': '1600px',
+        // => @media (min-width: 1600px) { ... }
+        '3xl': '1920px'
+        // => @media (min-width: 1920px) { ... }
+      },
+      fontFamily: {
+        'fira-sans':['"FiraSans"'],
+        'poppins':['"Poppins"']
+      },
       colors: {
-        primary: "#011D3F",
+        primary: "#255288",
         secondary: "#449C88",
         tertiary: "#007991"
+      },
+      spacing: {
+        '17' : '4.375rem',
       }
     },
   },

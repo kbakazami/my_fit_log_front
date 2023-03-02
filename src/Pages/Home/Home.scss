@@ -1,0 +1,8 @@
+.cover-banner{
+    background-image: url("./images/Banner_homepage.png");
+    @apply h-[400px] bg-cover;
+
+    @screen lg {
+        @apply h-screen;
+    }
+}
