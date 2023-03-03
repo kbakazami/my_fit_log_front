@@ -28,7 +28,6 @@ class AuthService {
     }
 
     register(password, email, lastname, firstname, birthdate) {
-        const date = new Date();
 
         return axios.post(API_URL + '/register', {
             password : bcrypt.hashSync(password, salt),
