@@ -16,7 +16,7 @@ export default function LoginForm(onSubmit){
     };
 
     return (
-        <div className={"flex flex-row min-h-screen relative mb-10"}>
+        <div className={"flex flex-row min-h-screen relative mb-10 lg:mb-0"}>
             <Link className={"text-white h-12 w-12 absolute left-5 lg:left-10 top-8"} to={"/"}>
                 <img src={myFitLogo} alt={"My Fit Log"} className={"w-full h-full bg-contain bg-no-repeat"}/>
             </Link>
@@ -30,7 +30,7 @@ export default function LoginForm(onSubmit){
             </div>
             <div className={"w-full lg:w-3/5 flex mt-24 lg:mt-0 px-4"}>
                 <div data-testid="form-login-container" id="form-login-container"
-                     className="form-container border border-primary w-full lg:w-7/12 m-auto px-10 py-4 lg:px-20 lg:py-9 rounded-xl">
+                     className={"form-container border border-primary w-full lg:w-7/12 m-auto px-10 py-4 lg:px-20 lg:py-9 rounded-xl"}>
                     <div className={"mb-10"}>
                         <h3 className={"w-fit mx-auto uppercase border-b-4 border-primary font-bold text-xl lg:text-2xl mb-6"}>
                             Nouvel utilisateur ?
@@ -69,7 +69,7 @@ export default function LoginForm(onSubmit){
                             <button className={"btn btn-tertiary empty w-fit mx-auto"} type="submit">Se connecter</button>
                         </form>
                         <p className={"text-tertiary underline-offset-8 mt-5 block"}>
-                            Mot de passe oublié
+                            Mot de passe oublié ?
                         </p>
                     </div>
 
