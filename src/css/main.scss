@@ -76,6 +76,15 @@ h1,h2,h3,h4 {
       }
     }
   }
+
+  &.btn-sugar-blood {
+    @apply flex border-2 border-sugar-blood bg-sugar-blood text-base font-normal normal-case;
+
+    &:hover {
+      @apply bg-transparent text-sugar-blood border-2;
+    }
+
+  }
 }
 
 .btn-nav {
@@ -96,6 +105,32 @@ h1,h2,h3,h4 {
   }
 }
 
+.form-category {
+  input:not(input[type="checkbox"]) {
+    @apply border border-gray p-4 rounded-xl w-full;
+
+    &::placeholder {
+      @apply text-gray italic;
+    }
+  }
+
+  &.sugar-blood {
+    input {
+      @apply border-sugar-blood;
+    }
+  }
+}
+
 .errors-form {
   @apply mt-2 text-error;
+}
+
+.btn-category {
+  @apply flex flex-row items-center gap-x-3.5 w-fit py-1 px-3.5;
+
+  &.btn-sugar-blood {
+    &.active {
+      @apply bg-sugar-blood text-white rounded-xl;
+    }
+  }
 }
