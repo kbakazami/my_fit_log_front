@@ -29,6 +29,7 @@ module.exports = {
         secondary: "#449C88",
         tertiary: "#007991",
         error: '#CE1717',
+        'sugar-blood': '#F78C9F'
       },
       spacing: {
         '17' : '4.375rem',
