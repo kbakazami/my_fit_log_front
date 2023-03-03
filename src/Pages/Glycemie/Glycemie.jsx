@@ -3,6 +3,7 @@ import GlycemieForm from "../../Form/GlycemieForm/GlycemieForm.jsx";
 import ProfileCategoryButton from "../../Components/ProfileCategoryButton/ProfileCategoryButton";
 import {ChartIcon, SugarBlood} from "../../Components/SvgComponents/SvgComponents";
 import {useState} from "react";
+import GlycemieGraph from "../../Components/Graphique/GlycemieGraph.jsx";
 
 export default function Glycemie(){
     const [isSugarBloodDisplay, setIsSugarBloodDisplay] = useState(false);
@@ -55,6 +56,10 @@ export default function Glycemie(){
 
             {!isRateDisplay ? true :
                 <GlycemieForm />
+            }
+
+            {!isChartDisplay ? true :
+                <GlycemieGraph />
             }
 
         </div>
