@@ -1,5 +1,6 @@
 import axios from "axios";
 import dateFormat from "./date.format.js";
+import authHeader from "./auth.header.js";
 
 const API_URL = 'http://localhost:8000/api';
 class GlycemieService{
@@ -29,6 +30,17 @@ class GlycemieService{
             createdAt : dateFormat.formatDate(),
             user : `api/users/${userId}`
         })
+    }
+
+    getRate(startdate, enddate){
+
+        const userId = localStorage.getItem("userId");
+
+        return axios.get(API_URL + `/glucose/glucose_btw/${userId}/${startdate}/${enddate}`, { headers: authHeader() })
+            .then(response => {
+                console.log(response);
+            })
+
     }
 }
 
