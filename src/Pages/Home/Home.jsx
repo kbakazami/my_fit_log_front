@@ -16,9 +16,9 @@ export default function Home(){
         <div>
             <header className={"cover-banner flex flex-col justify-between py-8 px-5 lg:px-10"}>
                 <div className={"flex justify-between items-center"}>
-                    <div className={"text-white h-12 w-12"}>
+                    <Link className={"text-white h-12 w-12"} to={"/"}>
                         <img src={myFitLogo} alt={"My Fit Log"} className={"w-full h-full bg-contain bg-no-repeat"}/>
-                    </div>
+                    </Link>
                     <div className={"flex gap-x-3 items-center"}>
                         <Link className={"text-white hover:underline underline-offset-8"} to={"/register"}>
                             Inscription

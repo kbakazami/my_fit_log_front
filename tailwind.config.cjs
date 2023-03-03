@@ -27,11 +27,13 @@ module.exports = {
       colors: {
         primary: "#255288",
         secondary: "#449C88",
-        tertiary: "#007991"
+        tertiary: "#007991",
+        error: '#CE1717',
       },
       spacing: {
         '17' : '4.375rem',
-        '15' : '3.75rem'
+        '15' : '3.75rem',
+        '22' : '5.625rem'
       }
     },
   },

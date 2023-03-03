@@ -51,6 +51,30 @@ h1,h2,h3,h4 {
     &:hover {
       @apply bg-white text-primary;
     }
+
+    &.mobile {
+      @apply border-primary text-primary;
+
+      &:hover {
+        @apply bg-primary text-white;
+      }
+    }
+  }
+
+  &.btn-tertiary {
+    @apply flex flex-row items-center border-2 border-tertiary bg-tertiary pr-6 text-base lg:text-xl;
+
+    &:hover {
+      @apply bg-white text-tertiary border-2;
+    }
+
+    &.empty {
+      @apply bg-transparent text-base font-normal normal-case text-tertiary pr-2.5;
+
+      &:hover {
+        @apply bg-tertiary text-white;
+      }
+    }
   }
 }
 
@@ -60,4 +84,18 @@ h1,h2,h3,h4 {
   &.active {
     @apply bg-white text-primary rounded-xl;
   }
+}
+
+.form-login {
+  input {
+    @apply border border-tertiary py-4 pr-4 pl-10 rounded-xl w-full;
+
+    &::placeholder {
+      @apply text-tertiary italic;
+    }
+  }
+}
+
+.errors-form {
+  @apply mt-2 text-error;
 }
