@@ -7,15 +7,15 @@ import AuthService from "./Services/auth.service.js";
 function App() {
 
     const [currentUser, setCurrentUser] = useState(undefined);
-    const navigate = useNavigate();
+    const navigation = useNavigate();
 
     useEffect(() => {
 
         const user = AuthService.getCurrentUser();
-        console.log(user);
 
         if (user){
             setCurrentUser(user);
+            navigation('/');
         }
 
     }, [])

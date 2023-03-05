@@ -1,0 +1,136 @@
+@font-face {
+  font-family: 'FiraSans';
+  src: url("../fonts/FiraSansCondensed-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FiraSans';
+  src: url("../fonts/FiraSansCondensed-Bold.ttf");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url("../fonts/Poppins-regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url("../fonts/Poppins-bold.ttf");
+  font-weight: 700;
+  font-style: normal;
+}
+
+body {
+  @apply font-fira-sans;
+}
+
+h1,h2,h3,h4 {
+  @apply font-poppins;
+}
+
+.btn {
+  @apply inline-block text-white font-bold border border-black bg-black rounded-xl py-1 px-2.5 text-xl ease-in-out duration-300 uppercase;
+
+  &.btn-primary {
+    @apply border-primary bg-primary px-8;
+
+    &:hover {
+      @apply bg-white text-primary;
+    }
+  }
+
+  &.btn-inverted {
+    @apply border-white bg-transparent normal-case font-normal text-base;
+
+    &:hover {
+      @apply bg-white text-primary;
+    }
+
+    &.mobile {
+      @apply border-primary text-primary;
+
+      &:hover {
+        @apply bg-primary text-white;
+      }
+    }
+  }
+
+  &.btn-tertiary {
+    @apply flex flex-row items-center border-2 border-tertiary bg-tertiary pr-6 text-base lg:text-xl;
+
+    &:hover {
+      @apply bg-white text-tertiary border-2;
+    }
+
+    &.empty {
+      @apply bg-transparent text-base font-normal normal-case text-tertiary pr-2.5;
+
+      &:hover {
+        @apply bg-tertiary text-white;
+      }
+    }
+  }
+
+  &.btn-sugar-blood {
+    @apply flex border-2 border-sugar-blood bg-sugar-blood text-base font-normal normal-case;
+
+    &:hover {
+      @apply bg-transparent text-sugar-blood border-2;
+    }
+
+  }
+}
+
+.btn-nav {
+  @apply flex flex-row items-center gap-x-3.5 w-fit py-1 px-3.5;
+
+  &.active {
+    @apply bg-white text-primary rounded-xl;
+  }
+}
+
+.form-login {
+  input {
+    @apply border border-tertiary py-4 pr-4 pl-10 rounded-xl w-full;
+
+    &::placeholder {
+      @apply text-tertiary italic;
+    }
+  }
+}
+
+.form-category {
+  input:not(input[type="checkbox"]) {
+    @apply border border-gray p-4 rounded-xl w-full;
+
+    &::placeholder {
+      @apply text-gray italic;
+    }
+  }
+
+  &.sugar-blood {
+    input {
+      @apply border-sugar-blood;
+    }
+  }
+}
+
+.errors-form {
+  @apply mt-2 text-error;
+}
+
+.btn-category {
+  @apply flex flex-row items-center gap-x-3.5 w-fit py-1 px-3.5;
+
+  &.btn-sugar-blood {
+    &.active {
+      @apply bg-sugar-blood text-white rounded-xl;
+    }
+  }
+}
