@@ -7,6 +7,7 @@ import AuthService from "./Services/auth.service.js";
 function App() {
 
     const [currentUser, setCurrentUser] = useState(undefined);
+    const navigation = useNavigate();
 
     useEffect(() => {
 
@@ -14,6 +15,7 @@ function App() {
 
         if (user){
             setCurrentUser(user);
+            navigation('/');
         }
 
     }, [])
