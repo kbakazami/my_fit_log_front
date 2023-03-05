@@ -23,8 +23,8 @@ export default function Glycemie(){
     }
 
     const showCharts = () => {
-        setIsSugarBloodDisplay(isSugarBloodDisplay);
-        setIsRateDisplay(isRateDisplay);
+        setIsSugarBloodDisplay(!isSugarBloodDisplay);
+        setIsRateDisplay(!isRateDisplay);
         setIsChartDisplay(!isChartDisplay);
     }
     return(
@@ -50,17 +50,14 @@ export default function Glycemie(){
                 </button>
             </div>
 
-            {isSugarBloodDisplay ? true :
                 <GlycemieGoalForm />
-            }
 
-            {!isRateDisplay ? true :
+
                 <GlycemieForm />
-            }
 
-            {!isChartDisplay ? true :
+
                 <GlycemieGraph />
-            }
+            
 
         </div>
     )
