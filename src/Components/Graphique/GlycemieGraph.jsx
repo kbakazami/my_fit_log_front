@@ -26,13 +26,13 @@ export default function GlycemieGraph(){
 
     const [dataGlycemie, setDataGlycemie] = useState();
 
-    useEffect(() => {
-        const rate = GlycemieService.getRate("2023-02-027", "2023-02-05");
-        console.log(rate);
-        if(rate){
-            setDataGlycemie(rate);
-        }
-    }, [])
+    // useEffect(() => {
+    //     const rate = GlycemieService.getRate("2023-02-027", "2023-02-05");
+    //     console.log(rate);
+    //     if(rate){
+    //         setDataGlycemie(rate);
+    //     }
+    // }, [])
 
     const options = {
         responsive: true,

@@ -14,7 +14,7 @@ class GlycemieService{
             glucoseMax,
             glucoseMinF,
             glucoseMaxF,
-            user : [`api/users/${userId}`]
+            users : [`api/users/${userId}`]
         }, {headers: {
                 "Content-Type" : "application/json",
             }})
